@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizza Order Menu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Montserrat" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
+</head>
+<body id="page">
+   
+    <div id="menu1" class="card-group container">
+        <div id="sizeMenu" class="card text-left">
+            <div class="card-header text-center">
+                <h3>Pie Size</h3>
+            </div>
+                <div class="card-body">
+                    
+                    <input class="size" type="radio" name="Size" value="10 Inch" id="size1">10 Inch<br>
+                    <input class="size" type="radio" name="Size" value="12 Inch" id="size2">12 Inch<br>
+                    <input class="size" type="radio" name="Size" value="16 Inch" id="size3">16 Inch<br>
+                    <input class="size" type="radio" name="Size" value="18 Inch" id="size4">18 Inch<br>
+                </div>
+        </div>
+        <div id="crustMenu" class="card text-left">
+             <div class="card-header text-center">
+                 <h3>Crust</h3>
+            </div>
+                <div class="card-body text-left">
+                    
+                    <input class="crust" type="radio" name="Crust"  id="crust1">Hand Tossed<br>
+                    <input class="crust" type="radio" name="Crust"  id="crust2">Thin Crust<br>
+                    <input class="crust" type="radio" name="Crust"  id="crust3">Garlic Herb Butter<br>
+                    <input class="crust" type="radio" name="Crust"  id="crust4">Cheese Stuffed<br>
+                    <input class="crust" type="radio" name="Crust"  id="crust5">Deep Dish Style <br>
+                </div>
+        </div>
+        <div id ="sauceMenu" class="card text-left">
+            <div class="card-header text-center">
+                 <h3>Sauce</h3>
+            </div>
+                <div class="card-body text-left">
+                    <input class="sauce" type="radio" name="Sauce" value="Tomato" id="sauce1">Robust Tomato<br>
+                    <input class="sauce" type="radio" name="Sauce" value="Marinara" id="sauce2">Hearty Marinara<br>
+                    <input class="sauce" type="radio" name="Sauce" value="Barbecue" id="sauce3">Spicy Barbecue<br>
+                    <input class="sauce" type="radio" name="Sauce" value="GarlicWhite" id="sauce4">Garlic Parmesan White<br>
+                </div>
+            
+        </div>
+    </div>
+    
+    <div id="menu2" class="card-group container">
+        <div id="cheeseMenu" class="card text-left">
+             <div class="card-header text-center">
+                 <h3>Cheese</h3>
+            </div>
+                <div class="card-body text-left">
+                    <input class="cheese" type="radio" name="Cheese" value="None" id="cheese1">None<br>
+                    <input class="cheese" type="radio" name="Cheese" value="Regular" id="cheese2">Regular<br>
+                    <input class="cheese" type="radio" name="Cheese" value="Exxtra Cheesy" id="cheese3">Exxtra Cheesy<br>
+                </div>
+        </div>
+        <div id="vegMenu" class="card text-left">
+             <div class="card-header text-center">
+                 <h3>Veggies</h3>
+            </div>
+                <div class="card-body text-left">
+                    <input class="veggies" type="checkbox" name="Veggies" value="None">None<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Mushrooms">Mushrooms<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Pineapple">Pineapple<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Jalapeno">Jalapeno<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Diced Tomato">Diced Tomato<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Red Pepper">Red Peppers<br>
+                </div>
+        </div>
+        <div id ="meatMenu" class="card text-left">
+             <div class="card-header text-center">
+                 <h3>Meats</h3>
+            </div>
+                <div class="card-body text-left">
+                    <input class="meats" type="checkbox" name="Meats" value="None">None<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Pepperoni">Pepperoni<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Chicken">Chicken<br>
+                    <input class="meats" type="checkbox" name="Meats" value="Bacon">Bacon<br>
+                </div>
+        </div>
+    </div>
+        <br>
+        <div class="submitCancel text-center">
+            <input type="button" class="btn btn-success btn-lg" onclick="pizzaOrder()" value="Place Order">
+            <input type="button" class="btn btn-danger btn-sm" onclick="clear()" value="Cancel Order">
+        </div>
+        <br>
+    <div id="menu3" class="card text-right container">
+        <div id="total" class="card-header">
+            <h3>Here's Your Order!</h3>
+            </div>
+        <div class="card-body text-left">
+            <div id="showText" class="card-text"></div>
+        </div>
+            <div id="totalPrice" class="card-footer"></div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="./js/javaScript.js"></script>
+</body>

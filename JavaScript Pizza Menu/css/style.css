@@ -1,0 +1,51 @@
+html {
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+#menu1, #menu2, #menu3 {
+    margin: 5px auto;
+    padding: 10px;
+}
+
+
+#sizeMenu, #crustMenu, #sauceMenu, #cheeseMenu, #vegMenu, #meatMenu {
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 10px auto;
+    border: 2px #000;
+}
+
+#sizeMenu .card-header, #crustMenu .card-header, #sauceMenu .card-header, #cheeseMenu .card-header, #vegMenu .card-header, #meatMenu .card-header {
+    box-shadow: inset  -2px -2px 50px 7px #400000;
+    color:beige;
+    border-bottom: 2px #000;
+    border-bottom-color: black;
+    border-radius: 10px 10px 0 0;
+    width: inherit;
+    background-color: #8B0A0A;
+}
+#sizeMenu .card-body, #crustMenu .card-body, #sauceMenu .card-body, #cheeseMenu .card-body, #vegMenu .card-body, #meatMenu .card-body {
+    box-shadow: inset  -2px -2px 50px 7px #400000;
+    height: inherit;
+    border-radius: 0 0 10px 10px;
+    width: inherit;
+    background-color: red;
+}
+
+#total .card-header {
+    width: auto;
+    
+}
+#total .card-footer {
+    width:auto;
+    position: absolute;
+}
+#page {
+    background-image: url(../img/pizzaPie.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
