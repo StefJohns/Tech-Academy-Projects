@@ -118,7 +118,7 @@ function getMeat(runningTotal, textPizza) {
 		}
 	}
 	var meatCount = selectedMeat.length;
-	if (meatCount > 2) {
+	if (meatCount >= 2) {
 		meatTotal = (meatCount - 1);
 	} else {
 		meatTotal = 0;
