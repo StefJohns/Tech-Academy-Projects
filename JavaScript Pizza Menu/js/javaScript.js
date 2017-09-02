@@ -1,15 +1,17 @@
 function pizzaOrder() {
-    var textPizza = "<h3>Your Pizza:</h3>";
-    var runningTotal = 0.00;
-    var sizeTotal = 0.00;
-    var sizeArray = document.getElementsByClassName("size");
-    for (var a = 0; a < sizeArray.length; a++) {
+    "use strict";
+    var textPizza = "<h3>Your Pizza:</h3>",
+        runningTotal = 0,
+        sizeTotal = 0,
+        a = 0,
+        sizeArray = document.getElementsByClassName("size");
+    for (a = 0; a < sizeArray.length; a++) {
 		if (sizeArray[a].checked) {
 			var selectedSize = sizeArray[a].value;
-			textPizza = textPizza+selectedSize+"<br>";
+			textPizza = textPizza+selectedSize+" ";
 		}
     }
-    if (selectedSize === "10Inch") {
+    if (selectedSize === "10 Inch") {
         sizeTotal = 6.00
     } else if (selectedSize === "12 Inch") {
         sizeTotal = 10.00
@@ -21,8 +23,9 @@ function pizzaOrder() {
     runningTotal= sizeTotal;
     getCrust(runningTotal, textPizza);
 };
+
 function getCrust(runningTotal, textPizza) {
-    var crustTotal = 0.00;
+    var crustTotal = 0;
     var crustArray = document.getElementsByClassName("crust");
     for (var b = 0; b < crustArray.length; b++) {
 		if (crustArray[b].checked) {
@@ -45,7 +48,7 @@ function getCrust(runningTotal, textPizza) {
     getSauce(runningTotal, textPizza);
 };
 function getSauce(runningTotal, textPizza) {
-    var sauceTotal = 0.00;
+    var sauceTotal = 0;
     var sauceArray = document.getElementsByClassName("sauce");
     for (var c = 0; c < sauceArray.length; c++) {
 		if (sauceArray[c].checked) {
@@ -66,7 +69,7 @@ function getSauce(runningTotal, textPizza) {
     getCheese(runningTotal, textPizza);
 };
 function getCheese(runningTotal, textPizza) {
-    var cheeseTotal = 0.00;
+    var cheeseTotal = 0;
     var cheeseArray = document.getElementsByClassName("cheese");
     for (var d = 0; d < cheeseArray.length; d++) {
 		if (cheeseArray[d].checked) {
@@ -87,15 +90,16 @@ function getCheese(runningTotal, textPizza) {
 function getVeg(runningTotal,textPizza) {
 	var vegTotal = 0;
 	var selectedVeg = [];
+    var e;
 	var vegArray = document.getElementsByClassName("veggies");
-	for (var e = 0; e < vegArray.length; e++) {
+	for (e = 0; e < vegArray.length; e++) {
 		if (vegArray[e].checked) {
-			selectedVeg.push(vegArray[e].value);
-			textPizza = textPizza+selectedVeg+"<br>";
+            selectedVeg.push(vegArray[e].value)
+			textPizza = textPizza+vegArray[e].value+"<br>";
 		}
 	}
 	var vegCount = selectedVeg.length;
-	if (vegCount > 1) {
+	if (vegCount >= 2) {
 		vegTotal = (vegCount - 1);
 	} else {
 		vegTotal = 0;
@@ -110,11 +114,11 @@ function getMeat(runningTotal, textPizza) {
 	for (var f = 0; f < meatArray.length; f++) {
 		if (meatArray[f].checked) {
 			selectedMeat.push(meatArray[f].value);
-			textPizza = textPizza+selectedMeat+"<br>";
+			textPizza = textPizza+meatArray[f].value+"<br>";
 		}
 	}
 	var meatCount = selectedMeat.length;
-	if (meatCount > 1) {
+	if (meatCount > 2) {
 		meatTotal = (meatCount - 1);
 	} else {
 		meatTotal = 0;
@@ -123,11 +127,4 @@ function getMeat(runningTotal, textPizza) {
 	document.getElementById("showText").innerHTML=textPizza;
 	document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+"</strong></h3>";
 };
-function clear() {
-    document.getElementsByClassName('crust').checked=false;
-    document.getElementsByClassName('size').checked=false;
-    document.getElementsByClassName('sauce').checked=false;
-    document.getElementsByClassName('cheese').checked=false;
-    document.getElementsByClassName('veggies').checked=false;
-    document.getElementsByClassName('meats').checked=false;
-}
+
