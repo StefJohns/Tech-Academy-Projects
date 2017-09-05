@@ -25,7 +25,7 @@
             <asp:TextBox ID="twoTextBox" runat="server" style="margin-left: 0px"></asp:TextBox>
         </p>
         <p>
-            <asp:Button ID="addButton" runat="server" Height="26px" OnClick="addButton_Click" Text="+" />
+            <asp:Button ID="addButton" runat="server" ForeColor="Black" Height="26px" OnClick="addButton_Click" Text="+" />
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="subButton" runat="server" OnClick="subButton_Click" Text="-" />
 &nbsp;&nbsp;&nbsp;
@@ -34,7 +34,7 @@
             <asp:Button ID="divdButton" runat="server" OnClick="divdButton_Click" Text="/" />
         </p>
         <p>
-            <asp:Label ID="resultLabel" runat="server" OnDataBinding="addButton_Click"></asp:Label>
+            <asp:Label ID="resultLabel" runat="server" OnDataBinding="addButton_Click" style="font-family: Arial, Helvetica, sans-serif; font-size: large; color: #000099"></asp:Label>
         </p>
     </form>
 </body>
