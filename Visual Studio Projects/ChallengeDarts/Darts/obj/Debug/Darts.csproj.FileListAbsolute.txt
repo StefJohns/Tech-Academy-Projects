@@ -1,0 +1,6 @@
+E:\Visual Studio Projects\ChallengeDarts\Darts\obj\Debug\Darts.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\ChallengeDarts\Darts\obj\Debug\Darts.csproj.CoreCompileInputs.cache
+E:\Visual Studio Projects\ChallengeDarts\Darts\bin\Debug\Darts.dll
+E:\Visual Studio Projects\ChallengeDarts\Darts\bin\Debug\Darts.pdb
+E:\Visual Studio Projects\ChallengeDarts\Darts\obj\Debug\Darts.dll
+E:\Visual Studio Projects\ChallengeDarts\Darts\obj\Debug\Darts.pdb

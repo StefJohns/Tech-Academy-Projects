@@ -1,0 +1,6 @@
+E:\Visual Studio Projects\PapaBobs\PapaBobs.DTO\bin\Debug\PapaBobs.DTO.dll
+E:\Visual Studio Projects\PapaBobs\PapaBobs.DTO\bin\Debug\PapaBobs.DTO.pdb
+E:\Visual Studio Projects\PapaBobs\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\PapaBobs\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.csproj.CoreCompileInputs.cache
+E:\Visual Studio Projects\PapaBobs\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.dll
+E:\Visual Studio Projects\PapaBobs\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.pdb
